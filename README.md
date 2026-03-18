@@ -7,7 +7,7 @@ O objetivo deste desafio é obter uma ideia das habilidades que o candidato poss
 
 - Comentários sempre são bem-vindos em métodos ou estruturas mais complexas.
 
-- Crie testes unitários, isso é importante!
+- Crie testes unitários, isso é importante e será avaliado!
 
 - Faça commits frequentes, assim podemos ver a evolução da sua solução.
 
@@ -38,13 +38,13 @@ Abaixo, mais detalhes:
 ### Tabela de "Integrante" :
 
 - Id
-- Franquia
 - Nome
 - Função
 
 ### Tabela de Time:
 
 - Id
+- Nome do Clube
 - Data
 
 ### Tabela de ComposicaoTime:
@@ -71,14 +71,14 @@ Preferencialmente, utilize-o da forma como está, com a assinatura proposta.
 
 No quadro, alguns detalhes sobre os métodos:
 
-| Método  | Parâmetros                                                 | Descrição                                                                                   |
-|--|------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| TimeDaData | Data, Lista de todos os Times                              | Vai retornar o Time com os integrantes do time daquela data                                 |
+| Método  | Parâmetros | Descrição |
+|--|--|--|
+| TimeDaData | Data, Lista de todos os Times                              | Vai retornar um Time, com a composição do time daquela data                                 |
 | IntegranteMaisUsado | Data inicial e Data final (podem ser null), Lista de todos os Times | Vai retornar o integrante que tiver presente na maior quantidade de times dentro do período |
-| IntegrantesDoTimeMaisComum | Data inicial e Data final (podem ser null), Lista de todos os Times | Vai retornar uma lista com os nomes dos integrantes do time mais comum dentro do período    |
-| FuncaoMaisComum | Data inicial e Data final (podem ser null), Lista de todos os Times | Vai retornar a função mais comum nos times dentro do período                                |
-| FranquiaMaisFamosa | Data inicial e Data final (podem ser null), Lista de todos os Times | Vai retornar o nome da Franquia mais comum nos times dentro do período                      |
-| ContagemPorFranquia | Data inicial e Data final (podem ser null), Lista de todos os Times | Vai retornar o número (quantidade) de Franquias dentro do período                           |
+| IntegrantesDoTimeMaisRecorrente | Data inicial e Data final (podem ser null), Lista de todos os Times | Vai retornar uma lista com os nomes dos integrantes do time mais recorrente dentro do período    |
+| FuncaoMaisRecorrente | Data inicial e Data final (podem ser null), Lista de todos os Times | Vai retornar a função mais recorrente nos times dentro do período                                |
+| ClubeMaisRecorrente | Data inicial e Data final (podem ser null), Lista de todos os Times |Vai retornar o nome do Clube mais comum dentro do período                      |
+| ContagemDeClubesNoPeriodo | Data inicial e Data final (podem ser null), Lista de todos os Times | Vai retornar o número (quantidade) de aparições de cada Clube participante no período                           |
 | ContagemPorFuncao | Data inicial e Data final (podem ser null), Lista de todos os Times | Vai retornar o número (quantidade) de Funções dentro do período                             |
 
 ## Funcionalidades Extras
@@ -104,11 +104,11 @@ Você deve usar os selects para trazer todos os dados, mas processe eles na ling
 | Endpoint  | Parâmetros |
 |--|--|
 | TimeDaData | Data | 
+| IntegrantesDoTimeMaisRecorrente | Data inicial e Data final (podem ser null) |
 | IntegranteMaisUsado | Data inicial e Data final (podem ser null) |
-| TimeMaisComum | Data inicial e Data final (podem ser null) |
-| FuncaoMaisComum | Data inicial e Data final (podem ser null) |
-| FranquiaMaisFamosa | Data inicial e Data final (podem ser null) |
-| ContagemPorFranquia | Data inicial e Data final (podem ser null) |
+| FuncaoMaisRecorrente | Data inicial e Data final (podem ser null) |
+| ClubeMaisRecorrente | Data inicial e Data final (podem ser null) |
+| ContagemDeClubesNoPeriodo | Data inicial e Data final (podem ser null) |
 | ContagemPorFuncao | Data inicial e Data final (podem ser null) |
 
 Exemplos de Resultados esperados:
@@ -117,23 +117,24 @@ TimeDaData
 ``` 
 {
   "data": 2021-01-15,
+  "clube": "Falcons",
   "integrantes": [ "Bangalore", "BloodHound", "Crypto" ]
 }
 ```
 
-FuncaoMaisComum
+FuncaoMaisRecorrente
 ``` 
 {
   "Função" : "Meia"
 }
 ```
 
-ContagemPorFranquia
+ContagemDeClubesNoPeriodo
 ``` 
 {
-  "Apex Legends": 5,
-  "Overwatch": 2,
-  "FreeFire": 3
+  "Falcons": 5,
+  "FURIA": 2,
+  "DarkZero Esports": 3
 }
 ```
 
