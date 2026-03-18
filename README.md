@@ -9,7 +9,7 @@ O objetivo deste desafio é obter uma ideia das habilidades que o candidato poss
 
 - Crie testes unitários, isso é importante e será avaliado!
   
-- Pense nas regras de negócio cabíveis no contexto do texto e trabalhe em cima delas, prevendo possibilidades que talvez não tenham sido descritas, e também documentando adequadamente.
+- Pense nas regras de negócio cabíveis no contexto do projeto e trabalhe em cima delas, prevendo possibilidades que talvez não tenham sido descritas, e também documentando adequadamente.
 
 - Faça commits frequentes, assim podemos ver a evolução da sua solução.
 
