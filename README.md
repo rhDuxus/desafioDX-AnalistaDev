@@ -8,6 +8,8 @@ O objetivo deste desafio é obter uma ideia das habilidades que o candidato poss
 - Comentários sempre são bem-vindos em métodos ou estruturas mais complexas.
 
 - Crie testes unitários, isso é importante e será avaliado!
+  
+- Pense nas regras de negócio cabíveis no contexto e trabalhe em cima delas, prevendo possibilidades e também documentando adequadamente.
 
 - Faça commits frequentes, assim podemos ver a evolução da sua solução.
 
